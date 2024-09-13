@@ -18,10 +18,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.6.0/remixicon.css"
     />
-    <link
-      href="{% static '/css/todoapp.css' %}"
-      rel="stylesheet"
-    />
+    <link href="{% static '/css/todoapp.css' %}" rel="stylesheet" />
 
     <!-- ====================================== Title Block ===================================== -->
     {% block title %}
@@ -35,9 +32,7 @@
   </head>
   <body class="container my-5" id="bodyIndex">
     <!-- ====================================== Body Block ===================================== -->
-    {% block body %} 
-        <h1>Olá mundo</h1>
-    {% endblock %}
+    {% block body %} {% include 'todoapp/todo_page.html' %} {% endblock %}
     <!-- ====================================== Body Block End ===================================== -->
 
     <!-- ====================================== Js Block ===================================== -->

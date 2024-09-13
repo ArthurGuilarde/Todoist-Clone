@@ -123,3 +123,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Define o tempo de vida do cookie de sessão para 10 anos (ou outro valor grande).
+SESSION_COOKIE_AGE = 60  # 1min em segundos
+
+# Faz com que a sessão persista entre reinicializações do navegador
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+
+# Mantém a sessão ativa sem necessidade de recriar em cada requisição
+SESSION_SAVE_EVERY_REQUEST = False
