@@ -1,0 +1,67 @@
+:root {
+  font-size: 100%;
+  --background-black-primary: #191919;
+  --background-black-secondary: #202020;
+  --text-black-primary: #d4d4d4;
+  --text-black-secondary: #9b9b9b;
+  --text-black-fade: #50503d;
+
+  --background-white-primary: #ffffff;
+  --background-white-secondary: #f7f7f5;
+  --text-white-primary: #37352f;
+  --text-white-secondary: #5f5e5b;
+  --text-white-fade: #9b9a97;
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--background-black-primary);
+  color: var(--text-black-primary);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}

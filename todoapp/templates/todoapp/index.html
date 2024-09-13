@@ -1,11 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt-Br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="pt-BR">
+  <head>
+    <!-- ====================================== Load Static ===================================== -->
+    {% load static %}
+    <!-- ====================================== Load Static ===================================== -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdealivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.6.0/remixicon.css"
+    />
+    <link
+      href="{% static '/css/todoapp.css' %}"
+      rel="stylesheet"
+    />
+
+    <!-- ====================================== Title Block ===================================== -->
+    {% block title %}
     <title>Todoist-Clone</title>
-</head>
-<body>
-    <h1>Olá, Mundo!</h1>
-</body>
+    {% endblock %}
+    <!-- ====================================== Title Block End ===================================== -->
+
+    <!-- ====================================== Css Block ===================================== -->
+    {% block css %} {% endblock %}
+    <!-- ====================================== Css Block End ===================================== -->
+  </head>
+  <body class="container my-5" id="bodyIndex">
+    <!-- ====================================== Body Block ===================================== -->
+    {% block body %} 
+        <h1>Olá mundo</h1>
+    {% endblock %}
+    <!-- ====================================== Body Block End ===================================== -->
+
+    <!-- ====================================== Js Block ===================================== -->
+    {% block js %} {% endblock %}
+    <!-- ====================================== Js Block End ===================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
