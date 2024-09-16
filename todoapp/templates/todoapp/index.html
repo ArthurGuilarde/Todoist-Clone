@@ -32,48 +32,90 @@
   </head>
   <body class="container-fluid" id="bodyIndex">
     <div class="row">
-      <div class="col d-flex justify-content-between" id="menus">
-        <div class="col-9 collapse show" id="collapseContent">
-          <div class="d-flex flex-column align-items-center">
-            <div>Menu 1</div>
-            <div>Menu 2</div>
+      <!-- ====================================== Side bar End ===================================== -->
+      <div class="col-2" id="menus">
+        <!-- ====================================== Side bar Head ===================================== -->
+        <div class="col d-flex">
+          <!-- ====================================== Side bar User ===================================== -->
+          <div class="collapse show collapseContent">
+            <div class="col-9 d-flex align-items-start">
+              <img
+                class="rounded-circle"
+                src="https://guilarde.com/_files/todoist/user.jpg"
+                alt="user_img"
+                style="width: 26px; height: 26px; margin-right: 10px"
+              />
+              <label>Arthur</label>
+            </div>
+          </div>
+          <!-- ====================================== Side bar User End ===================================== -->
+
+          <!-- ====================================== Side bar button ===================================== -->
+          <div
+            id="sideBarButton"
+            class="col d-flex flex-column align-items-end"
+          >
+            <div
+              class="btn btn-primary icon-button"
+              data-bs-toggle="collapse"
+              data-bs-target=".collapseContent"
+              aria-expanded="true"
+              aria-label="Abrir/fechar barra lateral"
+              aria-controls="collapseContent"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-layout-text-sidebar"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M3.5 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM3 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"
+                />
+                <path
+                  d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm12-1v14h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm-1 0H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h9z"
+                />
+              </svg>
+            </div>
+          </div>
+          <!-- ====================================== Side bar button End ===================================== -->
+        </div>
+        <!-- ====================================== Side bar Head End ===================================== -->
+
+        <!-- ====================================== Side bar options ===================================== -->
+        <div class="col collapse show collapseContent" id="collapseContent">
+          <div class="d-flex flex-column align-items-start">
+            <button class="add-button d-flex">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M12 23c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11Zm-.711-16.5a.75.75 0 1 1 1.5 0v4.789H17.5a.75.75 0 0 1 0 1.5h-4.711V17.5a.75.75 0 0 1-1.5 0V12.79H6.5a.75.75 0 1 1 0-1.5h4.789V6.5Z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <span style="margin-left: 10px">Adicionar tarefa</span>
+            </button>
             <div>Menu 3</div>
           </div>
         </div>
-        <div class="col d-flex flex-column align-items-end">
-          <!-- Toggle Button Inside "arthur" -->
-          <div
-            class="btn btn-primary"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseContent"
-            aria-expanded="true"
-            aria-label="Abrir/fechar barra lateral"
-            aria-controls="collapseContent"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-layout-text-sidebar"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M3.5 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM3 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1z"
-              />
-              <path
-                d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm12-1v14h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm-1 0H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h9z"
-              />
-            </svg>
-          </div>
-        </div>
+        <!-- ====================================== Side bar options End ===================================== -->
       </div>
+      <!-- ====================================== Side bar End ===================================== -->
 
+      <!-- ====================================== Body Block ===================================== -->
       <div class="col-10" id="conteudo">
-        <!-- ====================================== Body Block ===================================== -->
         {% block body %} {% include 'todoapp/todo_page.html' %} {% endblock %}
-        <!-- ====================================== Body Block End ===================================== -->
       </div>
+      <!-- ====================================== Body Block End ===================================== -->
     </div>
     <!-- ====================================== Js Block ===================================== -->
     {% block js %} {% endblock %}

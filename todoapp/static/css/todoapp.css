@@ -1,3 +1,4 @@
+/*-----------------------[ 1.Default CSS ]------------------------*/
 :root {
   font-size: 100%;
   --background-black-primary: #191919;
@@ -68,4 +69,29 @@ h6 {
 
 .teste {
   background-color: aqua;
+}
+
+/*-----------------------[ 2.Side Bar CSS ]------------------------*/
+.add-button {
+  background-color: transparent; /* Transparent background */
+  color: #d0342c; /* White text */
+  border: none; /* No border */
+  text-align: left; /* Center the text */
+  text-decoration: none; /* No underline */
+  cursor: pointer; /* Cursor appears clickable */
+  padding: 0;
+}
+
+.icon-button {
+  background-color: transparent; /* Transparent background */
+  color: #ffff; /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding around the text */
+  text-align: left; /* Center the text */
+  text-decoration: none; /* No underline */
+  cursor: pointer; /* Cursor appears clickable */
+}
+.icon-button:hover,
+.icon-button:active {
+  background-color: var(--background-black-secondary) !important;
 }
